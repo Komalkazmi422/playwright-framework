@@ -1,0 +1,28 @@
+{
+  "name": "playwright-automation-framework",
+  "version": "1.0.0",
+  "description": "Playwright Automation Framework with POM and Allure Reporting",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug",
+    "test:chrome": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:webkit": "npx playwright test --project=webkit",
+    "allure:report": "npx allure generate allure-results -o allure-report",
+    "allure:open": "npx allure open allure-report",
+    "allure:serve": "npx allure open allure-report",
+    "posttest": "npm run allure:report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.15.3",
+    "allure": "^3.15.0",
+    "allure-playwright": "^2.15.1",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
